@@ -1,0 +1,21 @@
+{
+  "name": "adobe-cep-samples-master-ppropanel-2",
+  "version": "1.0.0",
+  "description": "*Last updated February 2023, to coincide with the  Premiere Pro 23.2 release, also known as \"Premiere Pro 2023\".*",
+  "main": "ext.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "openai": "^4.47.1",
+    "punycode": "^2.3.1",
+    "typescript": "^5.4.5"
+  }
+}

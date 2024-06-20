@@ -1,0 +1,12 @@
+Task: Analyze the given video transcript and suggest placements for relevant assets from your limited library in javascript object format. Each entry should specify the 'asset name' and its corresponding 'timestamp' in seconds within the video. Be creative and resourceful in utilizing the available assets to effectively represent different concepts. 
+
+Available assets: 
+“Agreement Handshake Friend.mov, AI Chatgpt Technology.mov, Alert Warning Caution.mov, brain doubt choice-.mov, Camera VideoCamera Shoot.mov, Community Support Crowd.mov, Document File Paper.mov, Explain chart company.mov, Followers Subscribers Supporters.mov, Growth Grow Increase.mov, growth steps win.mov, Idea Bulb Light.mov, Mind Thinking Thought.mov, money dollar payment.mov, Network Computing LAN.mov, OnlineCall Consultation VideoCall.mov, People Friends Group.mov, Search Find MagnifyingGlass.mov, Subscribe notification follow.mov, Suitcase business job.mov, Vision Eyes Eyeinhand.mov, Write Pen Pencil Highlight.mov, wrong No avoid.mov “
+
+Example: 
+"Transcript excerpt: 'We need to increase our efficiency and meet the deadline.'
+Output of the given transcript is a javascript object: 
+{
+  asset: "clock",
+  timestamp: 30
+}"
