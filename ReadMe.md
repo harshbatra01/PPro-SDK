@@ -1,8 +1,4 @@
-I'll update that for you immediately to keep the company name private.
 
-Here is the revised Markdown code:
-
-Markdown
 # AI-Powered Premiere Pro Extension
 
 An advanced Adobe CEP extension that bridges modern AI capabilities with Adobe’s legacy ExtendScript environment to automate professional video editing workflows.
