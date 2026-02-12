@@ -25,64 +25,62 @@
 	<script src="./json2.js"></script>
 	<link id="ppstyle" href="css/style.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript">
-// 		const fs = require("fs");
-// const OpenAI = require("openai");
+		const fs = require("fs");
+const OpenAI = require("openai");
 
-// const openai = new OpenAI();
+const openai = new OpenAI();
 
-// const OPENAI_API_KEY = 'sk-proj-ncOnHrLsPDqfi1BiMdvHT3BlbkFJAIYEMqOBke0ulKgwHRhR';
+const OPENAI_API_KEY = 'sk-proj-ncOnHrLsPDqfi1BiMdvHT3BlbkFJAIYEMqOBke0ulKgwHRhR';
 
-// const readFileAsync = (filename) => {
-//   return new Promise((resolve, reject) => {
-//     fs.readFile(filename, 'utf8', (err, data) => {
-//       if (err) {
-//         reject(err);
-//       } else {
-//         resolve(data);
-//       }
-//     });
-//   });
-// };
+const readFileAsync = (filename) => {
+  return new Promise((resolve, reject) => {
+    fs.readFile(filename, 'utf8', (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
+};
 
-// async function apiCall() {
-//   try {
+async function apiCall() {
+  try {
 
-//     const promptText = await readFileAsync('prompt.txt');
+    const promptText = await readFileAsync('prompt.txt');
 
-//     const transcription = await openai.audio.transcriptions.create({
-//       file: fs.createReadStream('life.mp4'),
-//       model: "whisper-1",
-//       response_format: "srt",
-//       // prompt: "keep the timestamps length as 1 second",
-//       word_timestamps: true
-//     });
+    const transcription = await openai.audio.transcriptions.create({
+      file: fs.createReadStream('life.mp4'),
+      model: "whisper-1",
+      response_format: "srt",
+      // prompt: "keep the timestamps length as 1 second",
+      word_timestamps: true
+    });
 
-//     const completion = await openai.chat.completions.create({
-//       messages: [
-//         {"role": "system", "content": "You are a helpful assistant designed to output JSON."},
-//         { "role": "user", "content": transcription + promptText }
-//       ],
-//       response_format: { "type": "json_object" },
-//       model: "gpt-3.5-turbo",
-//     });
+    const completion = await openai.chat.completions.create({
+      messages: [
+        {"role": "system", "content": "You are a helpful assistant designed to output JSON."},
+        { "role": "user", "content": transcription + promptText }
+      ],
+      response_format: { "type": "json_object" },
+      model: "gpt-3.5-turbo",
+    });
 
-//     return completion.choices[0];
+    return completion.choices[0];
 
-//   } catch (error) {
-//     console.error('Error:', error);
-//   }
-//   var mediaName = "ab";  
-//   var csInterface = new CSInterface();
-//     csInterface.evalScript('$._PPP_.alertOutput("' + mediaName + '")', function(res){
+  } catch (error) {
+    console.error('Error:', error);
+  }
+  var mediaName = "ab";  
+  var csInterface = new CSInterface();
+    csInterface.evalScript('$._PPP_.alertOutput("' + mediaName + '")', function(res){
 
-// 	});
+	});
 
-// }
+}
 		$(document).ready(function () {
 
-			// For functions which require interaction at the JavaScript level, we provide these JQuery-based
-			// handlers, instead of directly invoking ExtendScript .This gives the JavaScript layer a chance
-			// to pass data into the ExtendScript layer, and process the results.
+		
 
 			$("#copypresets").on("click", function (e) {
 				e.preventDefault();
